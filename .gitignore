@@ -1,3 +1,25 @@
+# Archivos de Datos y Tablas
+# Excluye directorios de datos y formatos de archivo comunes en análisis de datos.
+# Es una buena práctica no subir los datos crudos al repositorio.
+data/
+datos/
+raw_data/
+processed_data/
+*.csv
+*.xlsx
+*.xls
+*.json
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.pkl
+*.pickle
+*.sav
+*.RData
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
