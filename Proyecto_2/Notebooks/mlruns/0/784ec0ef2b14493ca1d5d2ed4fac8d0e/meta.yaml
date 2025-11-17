@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/edyem/mlops_2025_2/Proyecto_2/Notebooks/mlruns/0/784ec0ef2b14493ca1d5d2ed4fac8d0e/artifacts
+end_time: 1761269545377
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 784ec0ef2b14493ca1d5d2ed4fac8d0e
+run_name: bold-bug-27
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761269545133
+status: 3
+tags: []
+user_id: edyem

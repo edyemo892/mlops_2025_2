@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/edyem/mlops_2025_2/Proyecto_3/Notebooks/mlruns/0/9fd8d03b85724a018dcd8599de07914a/artifacts
+end_time: 1762110618304
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9fd8d03b85724a018dcd8599de07914a
+run_name: unleashed-stag-853
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762110615136
+status: 3
+tags: []
+user_id: edyem

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/edyem/mlops_2025_2/Proyecto_3/Notebooks/mlruns/0/69e17e8d40254f25be7e2ad74f4b0895/artifacts
+end_time: 1762110615088
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 69e17e8d40254f25be7e2ad74f4b0895
+run_name: industrious-koi-204
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762110612204
+status: 3
+tags: []
+user_id: edyem

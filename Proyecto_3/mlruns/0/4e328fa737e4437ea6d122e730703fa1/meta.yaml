@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/edyem/mlops_2025_2/Proyecto_3/Notebooks/mlruns/0/4e328fa737e4437ea6d122e730703fa1/artifacts
+end_time: 1762110612090
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4e328fa737e4437ea6d122e730703fa1
+run_name: loud-foal-401
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762110609147
+status: 3
+tags: []
+user_id: edyem

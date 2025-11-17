@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/7707047cb8774742a3bfb6f7d63f60b9/artifacts
+end_time: 1761269426485
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7707047cb8774742a3bfb6f7d63f60b9
+run_name: amazing-newt-553
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761269426435
+status: 3
+tags: []
+user_id: edyem

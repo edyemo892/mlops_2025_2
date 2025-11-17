@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/edyem/mlops_2025_2/Proyecto_2/Notebooks/mlruns/0/models/m-dc4a81abbd5242a3b62f8e756ad4e46c/artifacts
+creation_timestamp: 1761265093194
+experiment_id: '0'
+last_updated_timestamp: 1761265101356
+model_id: m-dc4a81abbd5242a3b62f8e756ad4e46c
+model_type: null
+name: model
+source_run_id: d0297ca59679432badb6bb3693427d94
+status: 2
+status_message: null

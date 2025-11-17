@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/ebe3f87cf8fe45abb3e5cfb98a17580e/artifacts
+end_time: 1763413094880
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: ebe3f87cf8fe45abb3e5cfb98a17580e
+run_name: bright-whale-740
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763413092166
+status: 3
+tags: []
+user_id: edyem

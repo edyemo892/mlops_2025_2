@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/edyem/mlops_2025_2/Proyecto_2/Notebooks/mlruns/0/15ee375db9eb4dbbb40300b7846daba0/artifacts
+end_time: 1761266371520
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 15ee375db9eb4dbbb40300b7846daba0
+run_name: LightGBM RandomizedSearch
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761266355170
+status: 3
+tags: []
+user_id: edyem

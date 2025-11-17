@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/74926bb49c474069880f912635faa930/artifacts
+end_time: 1761269462211
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 74926bb49c474069880f912635faa930
+run_name: adorable-fly-188
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761269462160
+status: 3
+tags: []
+user_id: edyem
