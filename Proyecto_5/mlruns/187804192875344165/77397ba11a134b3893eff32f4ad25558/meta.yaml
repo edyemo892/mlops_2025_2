@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/77397ba11a134b3893eff32f4ad25558/artifacts
+end_time: 1763724868054
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 77397ba11a134b3893eff32f4ad25558
+run_name: puzzled-hog-367
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763724864702
+status: 3
+tags: []
+user_id: edyem

@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/7a3ba4c0e6d14350b439139f5606c0ef/artifacts
+end_time: 1763846762710
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 7a3ba4c0e6d14350b439139f5606c0ef
+run_name: selective-shrike-704
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763846760139
+status: 3
+tags: []
+user_id: edyem

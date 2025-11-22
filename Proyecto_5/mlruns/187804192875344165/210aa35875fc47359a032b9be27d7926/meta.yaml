@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/210aa35875fc47359a032b9be27d7926/artifacts
+end_time: 1763847491507
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 210aa35875fc47359a032b9be27d7926
+run_name: adaptable-ram-642
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763847488834
+status: 3
+tags: []
+user_id: edyem

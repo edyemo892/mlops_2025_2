@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/758420f07e8d4d88b1892cdb99b93422/artifacts
+end_time: 1763849236025
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 758420f07e8d4d88b1892cdb99b93422
+run_name: tasteful-shrimp-154
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763849233419
+status: 3
+tags: []
+user_id: edyem

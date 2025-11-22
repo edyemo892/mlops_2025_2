@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/144fbe4e69444077ba42d30216e140ac/artifacts
+end_time: 1763685010140
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 144fbe4e69444077ba42d30216e140ac
+run_name: luxuriant-ox-561
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763685007231
+status: 3
+tags: []
+user_id: edyem

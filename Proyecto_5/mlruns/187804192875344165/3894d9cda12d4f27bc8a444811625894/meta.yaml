@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/3894d9cda12d4f27bc8a444811625894/artifacts
+end_time: 1763849563260
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 3894d9cda12d4f27bc8a444811625894
+run_name: salty-bat-117
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763849560685
+status: 3
+tags: []
+user_id: edyem

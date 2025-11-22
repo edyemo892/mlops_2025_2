@@ -14,14 +14,14 @@ logging.basicConfig(level=logging.INFO,format='%(asctime)s:%(levelname)s:%(messa
 def main():
     # Load data
     ingestion = Ingestion()
-    train, test = ingestion.load_data()
+    data = ingestion.load_data()
     logging.info("Data ingestion completed successfully")
 
     # Clean data
     cleaner = Cleaner()
-    train_data = cleaner.clean_data(train)
-    test_data = cleaner.clean_data(test)
+    data_clean = cleaner.clean_data(data)
     logging.info("Data cleaning completed successfully")
+    train_data, test_data = cleaner.split_data(data_clean)
 
     #Prepare and train model
     trainer = Trainer()
@@ -61,7 +61,7 @@ def main():
     print("=====================================================\n")
 
 
-def train_with_mlflow():
+def train_with_mlflow(): 
     """
     Ejecuta el flujo completo bajo un run de MLflow.
     Adaptado para regresión: registra MSE y R2, parámetros y guarda el pipeline.
@@ -72,6 +72,7 @@ def train_with_mlflow():
     except Exception as e:
         raise RuntimeError("mlflow no está instalado en el entorno. Instálalo con: python -m pip install mlflow") from e
 
+    # Cargar configuración
     with open('config.yml', 'r') as file:
         config = yaml.safe_load(file)
 
@@ -79,32 +80,42 @@ def train_with_mlflow():
     mlflow.set_experiment(exp_name)
 
     with mlflow.start_run() as run:
-        # Load data
+        # ===============================
+        # 1. Ingesta de datos (SIN split)
+        # ===============================
         ingestion = Ingestion()
-        train, test = ingestion.load_data()
+        data = ingestion.load_data()   # ahora devuelve TODO el dataset
         logging.info("Data ingestion completed successfully")
 
-        # Clean data
+        # ===============================
+        # 2. Limpieza y split DESPUÉS
+        # ===============================
         cleaner = Cleaner()
-        train_data = cleaner.clean_data(train)
-        test_data = cleaner.clean_data(test)
-        logging.info("Data cleaning completed successfully")
+        data_clean = cleaner.clean_data(data)              # limpiar todo
+        train_data, test_data = cleaner.split_data(data_clean)  # split 80/20 ya limpio
+        logging.info("Data cleaning and splitting completed successfully")
 
-        # Prepare and train model
+        # ===============================
+        # 3. Entrenamiento
+        # ===============================
         trainer = Trainer()
         X_train, y_train = trainer.feature_target_separator(train_data)
         trainer.train_model(X_train, y_train)
         trainer.save_model()
         logging.info("Model training completed successfully")
 
-        # Evaluate model
+        # ===============================
+        # 4. Evaluación
+        # ===============================
         predictor = Predictor()
         X_test, y_test = predictor.feature_target_separator(test_data)
         # predictor.evaluate_model devuelve: y_pred, coef_, mse, r2
         y_pred, coef_, mse, r2 = predictor.evaluate_model(X_test, y_test)
         logging.info("Model evaluation completed successfully")
 
-        # Log tags, params y métricas
+        # ===============================
+        # 5. Log de tags, parámetros y métricas en MLflow
+        # ===============================
         mlflow.set_tag('Model developer', 'prsdm')
         mlflow.set_tag('preprocessing', 'OneHotEncoder + passthrough')
 
@@ -113,23 +124,25 @@ def train_with_mlflow():
         mlflow.log_metric("mse", float(mse))
         mlflow.log_metric("r2", float(r2))
 
-        # Log model artifact
+        # ===============================
+        # 6. Log de modelo en MLflow
+        # ===============================
         try:
             mlflow.sklearn.log_model(trainer.pipeline, "model")
-            # Opcional registro en el Model Registry (si hay servidor)
             model_name = config.get('mlflow', {}).get('registered_name', "insurance_model")
             model_uri = f"runs:/{run.info.run_id}/model"
             try:
                 mlflow.register_model(model_uri, model_name)
             except Exception:
-                # puede fallar si no hay Model Registry disponible; no bloquea
                 logging.info("Registro de modelo en MLflow falló o no está disponible; se ignoró.")
         except Exception as e:
             logging.warning(f"No se pudo guardar el modelo en MLflow: {e}")
 
         logging.info("MLflow tracking completed successfully")
 
-        # Imprimir resultados completos (mismo formato que main)
+        # ===============================
+        # 7. Impresión de resultados
+        # ===============================
         print("\n============= Model Evaluation Results ==============")
         print(f"Model: {trainer.model_name}")
 
@@ -153,5 +166,5 @@ def train_with_mlflow():
 
 
 if __name__ == "__main__":
-     main()
-     train_with_mlflow()
+    main()
+    train_with_mlflow()

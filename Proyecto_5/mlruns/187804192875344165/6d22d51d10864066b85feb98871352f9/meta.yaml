@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/6d22d51d10864066b85feb98871352f9/artifacts
+end_time: 1763734887785
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 6d22d51d10864066b85feb98871352f9
+run_name: kindly-shark-769
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763734887748
+status: 4
+tags: []
+user_id: edyem

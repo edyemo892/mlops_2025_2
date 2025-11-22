@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/5deb1b52d0b14ba0b4d1e11ed97ec2a6/artifacts
+end_time: 1763837615614
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 5deb1b52d0b14ba0b4d1e11ed97ec2a6
+run_name: grandiose-deer-704
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763837610649
+status: 3
+tags: []
+user_id: edyem

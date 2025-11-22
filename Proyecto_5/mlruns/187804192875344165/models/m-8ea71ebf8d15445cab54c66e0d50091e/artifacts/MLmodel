@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/models/m-8ea71ebf8d15445cab54c66e0d50091e/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.6.0
+model_id: m-8ea71ebf8d15445cab54c66e0d50091e
+model_size_bytes: 831
+model_uuid: m-8ea71ebf8d15445cab54c66e0d50091e
+prompts: null
+run_id: 7a3ba4c0e6d14350b439139f5606c0ef
+utc_time_created: '2025-11-22 21:26:00.187153'

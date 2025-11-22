@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/15aa2b01aafd4a969f0dacadeab71479/artifacts
+end_time: 1763849181168
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 15aa2b01aafd4a969f0dacadeab71479
+run_name: clumsy-bug-232
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763849178575
+status: 3
+tags: []
+user_id: edyem

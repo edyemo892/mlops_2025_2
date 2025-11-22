@@ -8,62 +8,94 @@
 # ✅ Para comentar con bloques (comentario de bloque):
 
 
-
-
-#import packages for data manipulation
 import pandas as pd
 import numpy as np
-
-#import packages for machine learning
-from sklearn import linear_model
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import OrdinalEncoder
+from sklearn.preprocessing import OneHotEncoder
 from sklearn.impute import SimpleImputer
 
-#import packages for data management
-import joblib
 class Cleaner:
     def __init__(self):
         self.imputer = SimpleImputer(strategy='most_frequent', missing_values=np.nan)
-        
-        
+        self.ohe = OneHotEncoder(
+            categories=[
+                [
+                    "Data Engineer",
+                    "Data Manager",
+                    "Data Scientist",
+                    "Machine Learning Engineer"
+                ]
+            ],
+            handle_unknown="ignore",
+            sparse_output=False
+        )
+
     def clean_data(self, data):
-        # Normalizar nombres de columnas a str por seguridad
         data = data.copy()
 
-        #use ordinal encoder to encode experience level
+        # 1. Encode ordinal experience
         encoder = OrdinalEncoder(categories=[['EN', 'MI', 'SE', 'EX']])
         data['experience_level_encoded'] = encoder.fit_transform(data[['experience_level']])
 
-        #use ordinal encoder to encode company size
+        # 2. Encode ordinal company size
         encoder = OrdinalEncoder(categories=[['S', 'M', 'L']])
         data['company_size_encoded'] = encoder.fit_transform(data[['company_size']])
 
-        #encode employmeny type and job title using dummy columns
-        #La llevo a train.py para respetar el flujo de trabajo
-        #data = pd.get_dummies(data, columns = ['employment_type', 'job_title'], drop_first = True, dtype = int)
+        # 3. One-hot encoding
+       
+        # 1. Separar las columnas a codificar
+        ohe_input = data[["job_title"]]
 
-        #drop original columns
-        data = data.drop(data.columns[0], axis=1)
-        data = data.drop(columns = ['experience_level', 'company_size','work_year','salary','salary_currency','employee_residence','remote_ratio','company_location'])
-        
-        # data.drop(['id','SalesChannelID','VehicleAge','DaysSinceCreated'], axis=1, inplace=True)
-        
-        # data['AnnualPremium'] = data['AnnualPremium'].str.replace('£', '').str.replace(',', '').astype(float)
-            
-        # for col in ['Gender', 'RegionID']:
-        #      data[col] = self.imputer.fit_transform(data[[col]]).flatten()
-             
-        # data['Age'] = data['Age'].fillna(data['Age'].median())
-        # data['HasDrivingLicense']= data['HasDrivingLicense'].fillna(1)
-        # data['Switch'] = data['Switch'].fillna(-1)
-        # data['PastAccident'] = data['PastAccident'].fillna("Unknown", inplace=False)
-        
-        # Q1 = data['AnnualPremium'].quantile(0.25)
-        # Q3 = data['AnnualPremium'].quantile(0.75)
-        # IQR = Q3 - Q1
-        # upper_bound = Q3 + 1.5 * IQR
-        # data = data[data['AnnualPremium'] <= upper_bound]
-        
+        # 2. Ajustar y transformar
+        ohe_output = self.ohe.fit_transform(ohe_input)
+
+        # 3. Crear nombres para las columnas especificadas
+        ohe_cols = (
+           [
+                "job_title_Data_Engineer",
+                "job_title_Data_Manager",
+                "job_title_Data_Scientist",
+                "job_title_Machine_Learning_Engineer"
+            ]
+        )
+
+        df_ohe = pd.DataFrame(ohe_output, columns=ohe_cols, index=data.index)
+
+        # 4. Agregar al dataset original
+        data = pd.concat([data, df_ohe], axis=1)
+        data = data.drop(columns=[ "job_title"])
+
+        data["employment_type_PT"] = (data["employment_type"] == "PT").astype(int)
+
+        # 4. Drop columnas no necesarias
+        data = data.drop(data.columns[0], axis=1)  # Unnamed: 0
+        data = data.drop(columns=[
+            'employment_type',
+            'experience_level',
+            'company_size',
+            'work_year',
+            'salary',
+            'salary_currency',
+            'employee_residence',
+            'remote_ratio',
+            'company_location'
+        ])
+        desired_order = [
+            "salary_in_usd",
+            "experience_level_encoded",
+            "company_size_encoded",
+            "employment_type_PT",
+            "job_title_Data_Engineer",
+            "job_title_Data_Manager",
+            "job_title_Data_Scientist",
+            "job_title_Machine_Learning_Engineer"
+        ]
+
+        data = data[desired_order]
         return data
+
+    def split_data(self, data_clean, split_ratio=0.8):
+        split = int(len(data_clean) * split_ratio)
+        train_data = data_clean.iloc[:split].reset_index(drop=True)
+        test_data  = data_clean.iloc[split:].reset_index(drop=True)
+        return train_data, test_data

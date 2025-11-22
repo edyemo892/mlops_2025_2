@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/76b2bf245cf34274bd8d69fa977c5d46/artifacts
+end_time: 1763722536357
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 76b2bf245cf34274bd8d69fa977c5d46
+run_name: secretive-fox-211
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763722536314
+status: 4
+tags: []
+user_id: edyem

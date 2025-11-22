@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/9e15b0d2781b4022b08868dba24c8b52/artifacts
+end_time: 1763849974648
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 9e15b0d2781b4022b08868dba24c8b52
+run_name: unique-cow-133
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763849972104
+status: 3
+tags: []
+user_id: edyem

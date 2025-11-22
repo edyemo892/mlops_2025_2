@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/d98b6a94e0fd4d6e871042785e6fe5ad/artifacts
+end_time: 1763731225758
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: d98b6a94e0fd4d6e871042785e6fe5ad
+run_name: illustrious-ray-453
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763731222547
+status: 3
+tags: []
+user_id: edyem

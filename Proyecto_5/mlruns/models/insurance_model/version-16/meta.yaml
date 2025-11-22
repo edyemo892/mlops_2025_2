@@ -1,0 +1,15 @@
+creation_timestamp: 1763849563185
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1763849563185
+model_id: m-516f47bc573a49f1862c2960b92a0195
+name: insurance_model
+run_id: 3894d9cda12d4f27bc8a444811625894
+run_link: null
+source: models:/m-516f47bc573a49f1862c2960b92a0195
+status: READY
+status_message: null
+storage_location: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/models/m-516f47bc573a49f1862c2960b92a0195/artifacts
+user_id: null
+version: 16

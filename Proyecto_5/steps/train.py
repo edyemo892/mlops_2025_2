@@ -24,10 +24,10 @@ class Trainer:
         
     def create_pipeline(self):
         # Ajusta las columnas según tu dataset
-        preprocessor = ColumnTransformer(transformers=[
-            ('onehot', OneHotEncoder(drop='first', handle_unknown='ignore'), 
-             ['employment_type', 'job_title'])
-        ], remainder='passthrough')
+        # preprocessor = ColumnTransformer(transformers=[
+        #     ('onehot', OneHotEncoder(drop='first', handle_unknown='ignore'), 
+        #      ['employment_type', 'job_title'])
+        # ], remainder='passthrough')
 
         # Seleccionar estimador según config (aquí LinearRegression)
         if self.model_name.lower().startswith("linear"):
@@ -40,7 +40,7 @@ class Trainer:
             model = LinearRegression()
 
         steps = [
-            ('preprocessor', preprocessor),
+            #('preprocessor', preprocessor),
             ('model', model)
         ]
 

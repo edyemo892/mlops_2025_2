@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/10423b91f5ff445d86568940740bf6fb/artifacts
+end_time: 1763730561324
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 10423b91f5ff445d86568940740bf6fb
+run_name: incongruous-goat-988
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763730558475
+status: 3
+tags: []
+user_id: edyem
