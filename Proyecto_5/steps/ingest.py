@@ -14,7 +14,9 @@ class Ingestion:
         data_path = self.config['data']['data_path']
 
         # 2. Cargar el dataset completo
-        data = pd.read_csv(data_path, sep=';')
+        #data = pd.read_csv(data_path, sep=';')
+        data = pd.read_csv(data_path)
+
 
         # 3. Retornar el dataset sin dividir
         return data

@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/edyem/mlops_2025_2/Proyecto_5/mlruns/187804192875344165/3090a153e4b54cb7b7c5878fe743a9b3/artifacts
+end_time: 1763856231689
+entry_point_name: ''
+experiment_id: '187804192875344165'
+lifecycle_stage: active
+run_id: 3090a153e4b54cb7b7c5878fe743a9b3
+run_name: sassy-lamb-588
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763856228534
+status: 3
+tags: []
+user_id: edyem
